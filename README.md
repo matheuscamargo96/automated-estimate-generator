@@ -341,7 +341,7 @@ The remodeling terms include the company's payment structure:
 10% upon final completion
 ```
 
-The JavaScript logic for grouping, calculations, client materials, dynamic terms, images and HTML generation is implemented inside the `Build Dynamic Estimate Document` node. :contentReference[oaicite:0]{index=0}
+The JavaScript logic for grouping, calculations, client materials, dynamic terms, images and HTML generation is implemented inside the `Build Dynamic Estimate Document` node.
 
 ## Reference Images
 
