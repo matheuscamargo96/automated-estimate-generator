@@ -1,8 +1,24 @@
 # Automated Estimate Generator
 
-This repository documents an automated estimate PDF generation workflow developed for Allforliz Painting and Renovations.
+This repository documents an automated estimate PDF generation workflow developed for Allforliz, a remodeling and construction company in Central Florida.
 
-The system connects Notion, n8n, JavaScript, HTML, Gotenberg and Google Drive to transform structured estimate data into a professional PDF document.
+The system connects ChatGPT, Notion, n8n, JavaScript, HTML, Gotenberg and Google Drive to turn a project scope into a professional PDF estimate.
+
+## Impact
+
+| | Before | After |
+|---|---|---|
+| **Process** | Every line item typed by hand into a third-party estimating website, then checked manually | Scope drafted with ChatGPT, sent to Notion with quantities, rates and notes, PDF generated automatically |
+| **Short estimate** | Up to 2-3 days | **~30 minutes** |
+| **Large custom estimate** | 2-3 days | **2-3 hours** (time now goes to reviewing details, not typing) |
+
+### End-to-end flow today
+
+1. **Scope with AI:** the team describes the project to ChatGPT and builds the full scope list together with it (areas, phases, services, quantities in square feet, notes).
+2. **Into Notion:** the finished scope is sent to the Notion estimate. ChatGPT fills in the values (square footage, quantities, notes) and moves the estimate from `Draft` to `Ready to Generate`.
+3. **PDF automation (this repository):** the status change triggers the n8n workflow, which builds and stores the PDF automatically.
+
+> Next step: turn step 1 and 2 into a dedicated **estimate agent** inside [JONAS](https://github.com/matheuscamargo96/jonas-ai-assistant), the company's AI assistant.
 
 ![Automated estimate generator workflow](assets/workflow/automated-estimate-generator-overview.png)
 
@@ -570,4 +586,4 @@ This repository is a technical case study based on a real business automation pr
 
 Sensitive data, credentials, private URLs and customer information have been removed.
 
-The workflow was created to support the internal estimate process of Allforliz Painting and Renovations.
+The workflow was created to support the internal estimate process of Allforliz.
